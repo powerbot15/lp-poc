@@ -24,6 +24,10 @@
     lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
   });
 
+  lpTag.agentSDK.bind('chatInfo', function () {
+    console.dir(arguments);
+  });
+
 </script>
 </body>
 </html>
