@@ -16,7 +16,18 @@
     // called when the unbind is completed successfully,
     // or when the action terminated with an error.
   }
-  lpTag.agentSDK.init();
+  lpTag.agentSDK.init({
+    notificationsCallback : function (data) {
+      console.dir(data)
+    },
+    visitorFocusedCallback : function (data) {
+      console.dir(data)
+    },
+    visitorBlurredCallback : function (data) {
+      console.dir(data)
+    },
+
+  });
   var cmdName = lpTag.agentSDK.cmdNames.write; // = "Write ChatLine"
   var data = {text: "Some text"};
   var clickBtn = document.getElementById('test-btn');
