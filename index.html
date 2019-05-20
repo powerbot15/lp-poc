@@ -9,6 +9,13 @@
 
 <button id="test-btn">Test</button>
 <script>
+  function notifyWhenDone (err) {
+    if (err) {
+      // Do something with the error
+    }
+    // called when the unbind is completed successfully,
+    // or when the action terminated with an error.
+  }
   lpTag.agentSDK.init();
   var cmdName = lpTag.agentSDK.cmdNames.write; // = "Write ChatLine"
   var data = {text: "Some text"};
